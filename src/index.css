@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary: #186078;
+  --color-primary-light: #2c8cae;
+  --color-primary-dark: #0f4051;
+  --color-gold: #C9A328;
+  --color-gold-light: #e3bd3f;
+  --color-gold-dark: #9e7f1c;
+  --color-dark-bg: #0b2e3b;
+  --color-darker-bg: #07222c;
+  
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Montserrat', sans-serif;
+  
+  --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #07222c; /* Deep rich petrol background */
+  color: #f3f4f6;
+  overflow-x: hidden;
+}
+
+/* Premium Glassmorphism */
+.glass-panel {
+  background: rgba(11, 46, 59, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(24, 96, 120, 0.12);
+  border-color: rgba(201, 163, 40, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(24, 96, 120, 0.25), 0 0 20px -5px rgba(201, 163, 40, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Text Gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #f5d76e 0%, #C9A328 50%, #9e7f1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-turquoise {
+  background: linear-gradient(135deg, #ffffff 0%, #aee0ee 60%, #186078 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07222c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #186078;
+  border-radius: 4px;
+  border: 2px solid #07222c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A328;
+}
+
+/* Hide scrollbar utility for carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
