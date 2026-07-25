@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, Calendar, Clock, X } from 'lucide-react';
+import { BookOpen, Calendar, Clock, X, Calculator, ArrowRight } from 'lucide-react';
 import { SectionTitle } from '../ui/SectionTitle';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
@@ -19,6 +19,11 @@ export const Blog: React.FC = () => {
   const cardDescClass = theme === 'dark' ? 'text-gray-300' : 'text-gray-600';
   const cardMetaClass = theme === 'dark' ? 'border-white/5' : 'border-gray-100';
 
+  const handleCalculatorRedirect = () => {
+    window.location.hash = 'hesaplama';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section id="blog" className={`py-20 relative transition-colors duration-500 ${sectionBgClass}`}>
       {/* Subtle border dividing sections */}
@@ -36,7 +41,7 @@ export const Blog: React.FC = () => {
         </p>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {blogPosts.map((post, idx) => (
             <Card
               key={post.id}
@@ -82,6 +87,44 @@ export const Blog: React.FC = () => {
             </Card>
           ))}
         </div>
+
+        {/* Directional Card for Hukuki Hesaplama Araçları */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className={`max-w-4xl mx-auto p-6 md:p-8 rounded-3xl transition-all duration-300 glass-panel border border-gold/30 hover:border-gold/60 shadow-2xl relative overflow-hidden group ${
+            theme === 'dark' ? 'bg-darker-bg/70' : 'bg-white/90 text-gray-800'
+          }`}
+        >
+          {/* Subtle gold decorative gradient glow */}
+          <div className="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-gold/10 blur-3xl group-hover:bg-gold/20 transition-all duration-500" />
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+            <div className="flex items-start space-x-4">
+              <div className="p-3.5 rounded-2xl bg-gold/15 border border-gold/40 text-gold flex-shrink-0 shadow-lg">
+                <Calculator size={32} />
+              </div>
+              <div className="text-left space-y-1.5">
+                <h4 className="text-lg md:text-xl font-serif font-bold text-gold">
+                  {t('calcCardRedirectTitle')}
+                </h4>
+                <p className={`text-xs md:text-sm leading-relaxed ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                  {t('calcCardRedirectDesc')}
+                </p>
+              </div>
+            </div>
+
+            <button
+              onClick={handleCalculatorRedirect}
+              className="w-full md:w-auto px-6 py-3.5 rounded-2xl bg-gradient-to-r from-gold via-gold-light to-gold-dark text-[#07222c] font-bold text-sm hover:scale-103 transition-all duration-300 shadow-xl cursor-pointer flex items-center justify-center space-x-2 flex-shrink-0"
+            >
+              <span>{t('calcCardRedirectButton')}</span>
+              <ArrowRight size={18} />
+            </button>
+          </div>
+        </motion.div>
       </div>
 
       {/* Blog Article Reader Modal */}

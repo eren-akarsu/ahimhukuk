@@ -4,7 +4,44 @@ export interface Translations {
   navAbout: string;
   navServices: string;
   navBlog: string;
+  navArticles: string;
+  navCalculators: string;
   navContact: string;
+
+  // Calculators Page
+  calcPageTitle: string;
+  calcPageSubtitle: string;
+  calcBannerText: string;
+  calcCardRedirectTitle: string;
+  calcCardRedirectDesc: string;
+  calcCardRedirectButton: string;
+
+  calcDisclaimerTitle: string;
+  calcDisclaimerText: string;
+  calcCategoryAll: string;
+  calcCategoryLabor: string;
+  calcCategoryPeriods: string;
+  calcCategoryInterest: string;
+  calcCategoryFees: string;
+  calcSearchPlaceholder: string;
+  calcNoResults: string;
+  calcFooterDisclaimerTitle: string;
+  calcFooterDisclaimerText: string;
+
+  // Calculator Titles
+  calcTitleKidem: string;
+  calcTitleIhbar: string;
+  calcTitleYillikIzin: string;
+  calcTitleFazlaMesai: string;
+  calcTitleIseIade: string;
+  calcTitleArabuluculuk: string;
+  calcTitleTebligat: string;
+  calcTitleIstinaf: string;
+  calcTitleTemyiz: string;
+  calcTitleKira: string;
+  calcTitleFaiz: string;
+  calcTitleHarc: string;
+  calcTitleZamanasimi: string;
 
   // Hero
   heroHeaderSubtitle: string;
@@ -113,7 +150,42 @@ export const translations: Record<'tr' | 'en', Translations> = {
     navAbout: 'Hakkımızda',
     navServices: 'Hizmetlerimiz',
     navBlog: 'Hukuki İçerikler',
+    navArticles: 'Hukuki Makaleler',
+    navCalculators: 'Hukuki Hesaplama Araçları',
     navContact: 'İletişim',
+
+    calcPageTitle: 'Hukuki Hesaplama Araçları',
+    calcPageSubtitle: 'Güncel mevzuat esas alınarak hazırlanan çeşitli hesaplama araçları ile hukuki süreçlerde ihtiyaç duyabileceğiniz temel hesaplamaları kolayca gerçekleştirebilirsiniz.',
+    calcBannerText: 'Bu araçlar yalnızca genel bilgilendirme amacı taşımaktadır. Her somut olay farklılık gösterebilir. Sonuçlar hukuki danışmanlık yerine geçmez.',
+    calcCardRedirectTitle: 'Hukuki Hesaplama Araçları',
+    calcCardRedirectDesc: 'Hukuki hesaplama araçlarımız ile çeşitli hukuki süreleri ve alacak hesaplamalarını kolayca gerçekleştirebilirsiniz.',
+    calcCardRedirectButton: 'Hukuki Hesaplama Araçlarına Git',
+
+    calcDisclaimerTitle: 'Önemli Hukuki Bilgilendirme ve Yasal Sorumluluk Beyanı',
+    calcDisclaimerText: 'Bu sayfadaki hesaplama araçları yalnızca genel bilgilendirme amacı taşımaktadır. Her somut olay kendi içerisinde farklılık gösterebilir. Hesaplama sonuçları resmi hukuki danışmanlık veya mütalaa yerine geçmez.',
+    calcCategoryAll: 'Tüm Araçlar',
+    calcCategoryLabor: 'İş Hukuku Alacakları',
+    calcCategoryPeriods: 'Dava & Usul Süreleri',
+    calcCategoryInterest: 'Kira & Faiz',
+    calcCategoryFees: 'Harç & Bilgilendirme',
+    calcSearchPlaceholder: 'Hesaplama aracı ara...',
+    calcNoResults: 'Aradığınız kriterlere uygun hukuki hesaplama aracı bulunamadı.',
+    calcFooterDisclaimerTitle: 'Türkiye Barolar Birliği Reklam Yasağı ve Yasal Uyarı Metni',
+    calcFooterDisclaimerText: 'Bu sayfadaki hesaplama araçları yalnızca genel bilgilendirme amacıyla hazırlanmıştır. Hesaplama sonuçları, somut olayın özelliklerine, yürürlükteki mevzuata ve güncel yargı kararlarına göre farklılık gösterebilir. Kesin hukuki değerlendirme için bir avukata danışılması tavsiye edilir.',
+
+    calcTitleKidem: 'Kıdem Tazminatı Hesaplama',
+    calcTitleIhbar: 'İhbar Tazminatı Hesaplama',
+    calcTitleYillikIzin: 'Yıllık İzin Hesaplama',
+    calcTitleFazlaMesai: 'Fazla Mesai Hesaplama',
+    calcTitleIseIade: 'İşe İade Davası Açma Süresi',
+    calcTitleArabuluculuk: 'Arabuluculuk Son Tutanak Tarihine Göre Dava Açma Süresi',
+    calcTitleTebligat: 'Tebligat Süre Hesaplama',
+    calcTitleIstinaf: 'İstinaf Süresi Hesaplama',
+    calcTitleTemyiz: 'Temyiz Süresi Hesaplama',
+    calcTitleKira: 'Kira Artış Oranı Hesaplama',
+    calcTitleFaiz: 'Faiz Hesaplama',
+    calcTitleHarc: 'Dava Harç ve Gideri Hesaplama',
+    calcTitleZamanasimi: 'Zamanaşımı Bilgilendirme Modülü',
 
     heroHeaderSubtitle: 'AVUKATLIK & HUKUKİ DANIŞMANLIK',
     heroTitle: 'Bürosu',
@@ -209,8 +281,43 @@ export const translations: Record<'tr' | 'en', Translations> = {
     navHome: 'Home',
     navAbout: 'About Us',
     navServices: 'Practice Areas',
-    navBlog: 'Publications',
+    navBlog: 'Legal Publications',
+    navArticles: 'Legal Articles',
+    navCalculators: 'Legal Calculation Tools',
     navContact: 'Contact',
+
+    calcPageTitle: 'Legal Calculation Tools',
+    calcPageSubtitle: 'Easily perform basic calculations you may need in legal processes with various calculation tools prepared based on current legislation.',
+    calcBannerText: 'These tools are for general informational purposes only. Each concrete case may differ. Results do not constitute legal advice.',
+    calcCardRedirectTitle: 'Legal Calculation Tools',
+    calcCardRedirectDesc: 'Easily calculate various legal periods and receivables with our legal calculation tools.',
+    calcCardRedirectButton: 'Go to Legal Calculation Tools',
+
+    calcDisclaimerTitle: 'Important Legal Information and Disclaimer',
+    calcDisclaimerText: 'The calculation tools on this page are for general informational purposes only. Each concrete case may differ. Calculation results do not substitute for formal legal consultancy or opinion.',
+    calcCategoryAll: 'All Tools',
+    calcCategoryLabor: 'Labor Law Receivables',
+    calcCategoryPeriods: 'Litigation & Procedural Periods',
+    calcCategoryInterest: 'Rent & Interest',
+    calcCategoryFees: 'Fees & Information',
+    calcSearchPlaceholder: 'Search for a calculation tool...',
+    calcNoResults: 'No legal calculation tool matching your criteria was found.',
+    calcFooterDisclaimerTitle: 'Union of Turkish Bar Associations Advertising Ban and Legal Warning Text',
+    calcFooterDisclaimerText: 'The calculation tools on this page are prepared for general information purposes only. The calculation results may differ according to the characteristics of the concrete event, the legislation in force and the current judicial decisions. It is recommended to consult a lawyer for an exact legal evaluation.',
+
+    calcTitleKidem: 'Severance Pay Calculator',
+    calcTitleIhbar: 'Notice Pay Calculator',
+    calcTitleYillikIzin: 'Annual Leave Calculator',
+    calcTitleFazlaMesai: 'Overtime Pay Calculator',
+    calcTitleIseIade: 'Reinstatement Lawsuit Period',
+    calcTitleArabuluculuk: 'Filing Period based on Mediation Final Report',
+    calcTitleTebligat: 'Notification Period Calculator',
+    calcTitleIstinaf: 'Appellate (Istinaf) Period Calculator',
+    calcTitleTemyiz: 'Appeal (Temyiz) Period Calculator',
+    calcTitleKira: 'Rent Increase Rate Calculator',
+    calcTitleFaiz: 'Interest Calculator',
+    calcTitleHarc: 'Lawsuit Fee and Expense Calculator',
+    calcTitleZamanasimi: 'Statute of Limitations Info Module',
 
     heroHeaderSubtitle: 'ADVOCACY & LEGAL CONSULTANCY',
     heroTitle: 'Law Office',

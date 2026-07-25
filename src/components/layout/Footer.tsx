@@ -28,6 +28,7 @@ export const Footer: React.FC<FooterProps> = () => {
     { labelKey: 'navAbout', href: '#about' },
     { labelKey: 'navServices', href: '#services' },
     { labelKey: 'navBlog', href: '#blog' },
+    { labelKey: 'navCalculators', href: '#hesaplama' },
     { labelKey: 'navContact', href: '#contact' },
   ];
 

@@ -118,3 +118,74 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Custom Input Styling (Number arrows and Date picker icon) */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23C9A328" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* React DatePicker Custom Theme (Gold/Dark) */
+.custom-calendar-theme {
+  background-color: var(--color-darker-bg) !important;
+  border: 1px solid rgba(201, 163, 40, 0.3) !important;
+  border-radius: 12px !important;
+  font-family: var(--font-sans) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+  padding: 10px !important;
+}
+
+.custom-calendar-theme .react-datepicker__header {
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(201, 163, 40, 0.2) !important;
+  padding-top: 5px !important;
+}
+
+.custom-calendar-theme .react-datepicker__current-month,
+.custom-calendar-theme .react-datepicker__day-name {
+  color: var(--color-gold) !important;
+  font-weight: 600 !important;
+}
+
+.custom-calendar-theme .react-datepicker__day {
+  color: #e5e7eb !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.custom-calendar-theme .react-datepicker__day:hover {
+  background-color: rgba(201, 163, 40, 0.15) !important;
+  color: var(--color-gold) !important;
+}
+
+.custom-calendar-theme .react-datepicker__day--selected,
+.custom-calendar-theme .react-datepicker__day--keyboard-selected {
+  background-color: var(--color-gold) !important;
+  color: var(--color-darker-bg) !important;
+  font-weight: bold !important;
+}
+
+.custom-calendar-theme .react-datepicker__day--outside-month {
+  color: #4b5563 !important;
+}
+
+.custom-calendar-theme .react-datepicker__navigation-icon::before {
+  border-color: var(--color-gold) !important;
+}
+
+.custom-calendar-theme .react-datepicker__navigation:hover *::before {
+  border-color: var(--color-gold-light) !important;
+}
