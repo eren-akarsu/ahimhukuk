@@ -189,3 +189,29 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .custom-calendar-theme .react-datepicker__navigation:hover *::before {
   border-color: var(--color-gold-light) !important;
 }
+
+/* Custom Month/Year dropdown styles */
+.custom-calendar-theme .react-datepicker__month-select,
+.custom-calendar-theme .react-datepicker__year-select {
+  background-color: var(--color-dark-bg) !important;
+  color: #e5e7eb !important;
+  border: 1px solid rgba(201, 163, 40, 0.3) !important;
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+  margin: 0 4px !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.9rem !important;
+  outline: none !important;
+  cursor: pointer !important;
+}
+
+.custom-calendar-theme .react-datepicker__month-select:focus,
+.custom-calendar-theme .react-datepicker__year-select:focus {
+  border-color: var(--color-gold) !important;
+}
+
+.custom-calendar-theme .react-datepicker__month-select option,
+.custom-calendar-theme .react-datepicker__year-select option {
+  background-color: var(--color-darker-bg) !important;
+  color: #e5e7eb !important;
+}
